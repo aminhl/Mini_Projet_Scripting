@@ -103,6 +103,20 @@ then
         echo "------------------------------------------------------------------"
  cat favFile	
 
+elif [ "$1" == "-r" ]
+then
+	echo "-----------------------------------------------------------------"
+        echo "                       L'option -r est presente"
+        echo "------------------------------------------------------------------"
+del=`grep -n $2 favFile`
+        rem=`echo $del | cut -d: -f1`
+	#echo $rem Test! 
+	if [ -z "$del" ];then
+        echo "$2 Not A Favori"
+        elif [ -n "$del" ];then
+	sed -i "$rem"d favFile
+	fi
+
 elif [ "$1" == "-s" ]
 then
 	echo "-----------------------------------------------------------------"
