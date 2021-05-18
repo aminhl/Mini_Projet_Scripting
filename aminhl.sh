@@ -81,10 +81,10 @@ elif [ "$1" == "-v" ]
         echo "------------------------------------------------------------------"
 	cat /proc/version
 	cat auteurs
-elif [ "$1" == "-f" ]
+elif [ "$1" == "-r" ]
 then
 	echo "-----------------------------------------------------------------"
-        echo "                       L'option -f est presente"
+        echo "                       L'option -r est presente"
         echo "------------------------------------------------------------------"
  del=`grep -n $2 favFile`
         rem=`echo $del | cut -d: -f1`
@@ -102,20 +102,6 @@ then
         echo "                       L'option -l est presente"
         echo "------------------------------------------------------------------"
  cat favFile	
-
-elif [ "$1" == "-r" ]
-then
-	echo "-----------------------------------------------------------------"
-        echo "                       L'option -r est presente"
-        echo "------------------------------------------------------------------"
-del=`grep -n $2 favFile`
-        rem=`echo $del | cut -d: -f1`
-	#echo $rem Test! 
-	if [ -z "$del" ];then
-        echo "$2 Not A Favori"
-        elif [ -n "$del" ];then
-	sed -i "$rem"d favFile
-	fi
 
 elif [ "$1" == "-s" ]
 then
