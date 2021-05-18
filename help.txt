@@ -1,0 +1,11 @@
+-----------------------------------Help-----------------------------------
+
+- [-a] : Ajoute le chemin dans votre liste de favoris .
+- [-c] : Change le répertoire de travail.
+- [-r] : Supprimer un favori de la liste.
+- [-l] : Afficher la liste de tous les favoris.
+- [-h] : Afficher le help.
+- [-g] : Menu graphique.
+- [-m] : Menu textuel. 
+- [-s] : Sauvegarder des images.
+- [-n] : Renommer les images en ce format NOM_DATE_HEURE.jpg
